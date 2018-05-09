@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Операции между двумя числами</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+	<style type="text/css">
+		#app{
+			text-align: center;
+			border:2px solid black;
+			border-radius: 5px;
+			padding: 20px;
+			width: 40%;
+		}
+	</style>
+
+	<div id="app" >
+		<p>Операции между двумя числами</p>
+		<form name="vvod"> 
+			<input  v-model="value" type="text" placeholder="X"  v-on:input="resultat($event.target.value)" > 
+			<select v-model="selected">
+			  <option >+</option>
+			  <option >-</option>
+			  <option>*</option>
+			  <option>/</option>
+			</select>
+			<input  v-model="secondvalue"  type="text" placeholder="Y" v-on:input="resultat($event.target.secondvalue)"> 
+			=  {{result}}	
+		</form>
+	</div>
+
+	
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
